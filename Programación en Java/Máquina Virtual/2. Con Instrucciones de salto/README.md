@@ -1,6 +1,6 @@
 <!--Creado por Jonathan Carrero -->
 
-**Versión básica**
+**Añadidas instrucciones de salto**
 ==============
 ----------
 
