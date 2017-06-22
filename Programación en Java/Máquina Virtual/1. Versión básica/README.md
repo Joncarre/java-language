@@ -1,6 +1,6 @@
 <!--Creado por Jonathan Carrero -->
 
-**Máquina Virtual**
+**Versión básica**
 ==============
 ----------
 
