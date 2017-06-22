@@ -33,5 +33,5 @@ En el momento de mostrar el estado de la máquina, la aplicación muestra la pil
 
 A continuación aparece un ejemplo de ejecución. El texto en verde representa lo que el usuario de la aplicación introduce por teclado.
 
-![enter image description here]()
+![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Programaci%C3%B3n%20en%20Java/M%C3%A1quina%20Virtual/images/v1_1.png)
 
