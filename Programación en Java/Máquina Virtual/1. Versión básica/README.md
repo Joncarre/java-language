@@ -31,6 +31,6 @@ A continuación mostramos un ejemplo de ejecución de nuestra simulación. Obser
 
 En el momento de mostrar el estado de la máquina, la aplicación muestra la pila y la memoria tras la ejecución de cada bytecode. Si no tienen elementos, se indica <vacia>. En el caso de la memoria eso viene a significar que alguna celda de memoria ha sido escrita en algún momento. Sólo se mostrará el contenido de las posiciones de memoria que están ocupadas.
 
-A continuación aparece un ejemplo de ejecución. El texto en negrita representa lo que el usuario de la aplicación introduce por teclado.
+A continuación aparece un ejemplo de ejecución. El texto en verde representa lo que el usuario de la aplicación introduce por teclado.
 
 
