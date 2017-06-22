@@ -33,4 +33,5 @@ En el momento de mostrar el estado de la máquina, la aplicación muestra la pil
 
 A continuación aparece un ejemplo de ejecución. El texto en verde representa lo que el usuario de la aplicación introduce por teclado.
 
+![enter image description here]()
 
