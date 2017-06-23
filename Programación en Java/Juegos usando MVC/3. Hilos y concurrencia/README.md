@@ -22,6 +22,6 @@ La nueva versión quedaría de la siguiente forma (puede observarse cómo el jug
 
 ![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Programaci%C3%B3n%20en%20Java/Juegos%20usando%20MVC/images/6_1.png)
 
-Cabe destacar que cuando un jugador no tiene el turno no puede realizar movimientos automáticos como random o smart. Es por eso que creo convenientes que dichos botones se deshabiliten mientras no es su turno. Este sería el resultado:
+Cabe destacar que cuando un jugador no tiene el turno no puede realizar movimientos automáticos como random o smart. Es por eso que creo conveniente que dichos botones se deshabiliten mientras no es su turno. Este sería el resultado:
 
 ![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Programaci%C3%B3n%20en%20Java/Juegos%20usando%20MVC/images/6_2.png)
