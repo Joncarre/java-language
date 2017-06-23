@@ -30,8 +30,8 @@ En el caso anterior, el nodo elegido sería el (3,4) como el sucesor del (2,4).
 
 Al comenzar debemos especificar las dimensiones que tendrá nuestra matriz, puntos de inicio y fin y si queremos que haya obstáculos a lo largo del camino.
 
-![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Ingenier%C3%ADa%20del%20Conocimiento/images/IC1_1.png)
+![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Ingenier%C3%ADa%20del%20Conocimiento/images/IC1_2.png)
 
 Después, tan sólo queda ver cómo el algoritmo realiza las expansiones para encontrar el camino mínimo hasta el punto de aterrizaje. Por cada expansión, el programa imprime una vez el estado actual de la matriz y sus elementos, finalizando y mostrando el recorrido hecho.
 
-![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Ingenier%C3%ADa%20del%20Conocimiento/images/IC1_1.png)
+![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Ingenier%C3%ADa%20del%20Conocimiento/images/IC1_3.png)
