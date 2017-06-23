@@ -24,7 +24,7 @@ Tanto al Tic-Tac-Toe como a El lobo y las ovejas se podrá jugar con la siguient
  
 donde [juego] puede ser *ttt* (para Tic-Tac-Toe) o *was* (WolfAndSheep) y [jugador] puede ser *console*, *random* o *smart*. A continuación se muestra un ejemplo donde se juega a WolfAndSheep, el primer jugador es un usuario y el segundo es un jugador inteligente.
 
-IMAGEN
+![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Programaci%C3%B3n%20en%20Java/Juegos%20usando%20MVC/images/4_4.png)
 
 Ya que en esta primera versión el juego tan sólo es por consola, notemos que los movimientos posible ya nos los dan y nosotros sólo debemos decidir dónde mover. A modo de ejemplo veamos el primer movimiento de un lobo en modo console y cómo un jugador smart responde a dicha jugada.
 
@@ -33,5 +33,24 @@ Ya que en esta primera versión el juego tan sólo es por consola, notemos que l
 También podemos observar un final de partida. En este caso, las ovejas han logrado acorralar al lobo y, por lo tanto, han ganado la partida.
 
 ![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Programaci%C3%B3n%20en%20Java/Juegos%20usando%20MVC/images/4_2.png)
+
+**JUnit**
+
+Las pruebas unitarias son una forma de verificar que los métodos de las clases funcionan como se espera. Se llaman unitarias porque prueban las unidades más pequeñas que tiene sentido probar en aislamiento unas de otras (en oposición a las pruebas de integración, que verifican que todo funciona una vez juntado). Usaremos la librería JUnit, que cuenta con soporte tanto Maven como Eclipse, para escribir y ejecutar pruebas unitarias en nuestras prácticas.
+
+Puedes encontrar más información para instalar y realizar pruebas JUnit en el siguiente enlace: http://junit.org/junit4/
+
+Las pruebas llevadas a cabo son las siguientes:
+
+- Un lobo rodeado resulta en victoria de las ovejas.
+- Un lobo en una casilla con y = 0 resulta en victoria del lobo.
+- Un lobo en su posición inicial sólo tiene 1 acción válida; y tras llevarla a cabo, en su siguiente turno, tiene 4 acciones válidas.
+- Una oveja en su posición inicial tiene 2 acciones válidas; y si está en un lateral, tiene 2 acciones válidas.
+- Proporcionar menos de 3 argumentos ó demasiados argumentos (más jugadores de los que acepta el juego) resulta en un error.
+- Proporcionar un juego inválido como primer argumento resulta en un error.
+
+A modo de ejemplo, veamos el código correspondiente a la segunda prueba (lobo en casilla y = 0 resulta victorioso):
+
+![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Programaci%C3%B3n%20en%20Java/Juegos%20usando%20MVC/images/4_4.png)
 
 
