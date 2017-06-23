@@ -12,7 +12,7 @@ En esta primera versión del proyecto nos encontramos con dos juegos:
 
 - *El lobo y las ovejas*: para este juego jugaremos, en principio, en un tablero 8x8 similar al usado para el ajedrez, donde sólo se usarán las casillas negras (ver ilustración más abajo). Las ovejas se sitúan en las casillas negras de un extremo, mientras que el lobo ocupa la esquina opuesta. El juego transcurre por turnos, empezando a mover el jugador que controla al lobo. El lobo puede moverse, en diagonal, 1 casilla en cualquier dirección. Las ovejas pueden moverse, también en diagonal, 1 casilla; pero sólo avanzando hacia el lado opuesto a su posición inicial. El lobo gana si consigue alcanzar el extremo del tablero en el que empezaban las ovejas. Las ovejas ganan si consiguen que el lobo quede inmovilizado. Se supone que el jugador 0 es el que controla el lobo, y el jugador 1 es el que controla la ovejas.
 
-Tanto al Tic-Tac-Toe como a El lobo y las ovejas se podrá jugar con la siguiente convinación de jugadores:
+Tanto al Tic-Tac-Toe como a El lobo y las ovejas se podrá jugar con la siguiente combinación de jugadores:
 
  - console: en este modo es el propio usuario quien realiza las jugadas.
  - random: un jugador totalmente aleatorio realizará las jugadas.
