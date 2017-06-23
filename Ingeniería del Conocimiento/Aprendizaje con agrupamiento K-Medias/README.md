@@ -14,15 +14,15 @@ El objetivo básicamente en la partición de un conjunto de n observaciones en k
 - **4.** Obtener los *v*i de acuerdo con la ecuación superior de la siguiente imagen.
 - **5.** Recalcular por medio de la ecuación inferior de la siguiente imagen.
 
-IMAGEN
+![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Ingenier%C3%ADa%20del%20Conocimiento/images/IC4_2.png)
 
 - **6.** Repetir los pasos **3** y **5** hasta que *v*i no cambie o el cambio sea pequeño. El criterio de finalización corresponde a un cierto valor epsilon tal y como se muestra a continuación. Cuando el valor de la iteración i-ésima + 1 menos el valor de la iteración i-ésima sean (para todos los *v*i) menor que epsilon, entonces el algoritmo se detiene.
 
-IMAGEN
+![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Ingenier%C3%ADa%20del%20Conocimiento/images/IC4_3.png)
 
 
 **Ejemplo de ejecución**
 
 En la siguiente imagen observamos las dos primeras iteraciones del algoritmo. En ella se puede observar los valores de los centros iniciales, la matriz de pertenencia calculada (que tiene mxn dimensión donde m es el número de clases y n es el número de muestras), el recálculo de los centros y la comprobación del valor epsilon. En este ejemplo concreto, aunque no aparece en la imagen, el algoritmo detiene su ejecución en la iteración 4.
 
-IMAGEN
+![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Ingenier%C3%ADa%20del%20Conocimiento/images/IC4_1.png)
