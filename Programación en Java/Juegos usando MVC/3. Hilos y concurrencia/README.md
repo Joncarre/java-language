@@ -6,7 +6,7 @@
 
 **Descripción**
 
-Los cambios principales, aunque están cómo se lleva a cabo el flujo de ejecución (y por lo tanto en el código), vamos a qué nuevos componentes tenemos en la ventana:
+Los cambios principales, aunque están cómo se lleva a cabo el flujo de ejecución (y por lo tanto en el código), vamos a ver qué nuevos componentes tenemos en la ventana:
 
 - Un icono para ilustrar que está pensando el jugador automático (smart). El fondo debe aparecer en amarillo cuando está pensando.
 
