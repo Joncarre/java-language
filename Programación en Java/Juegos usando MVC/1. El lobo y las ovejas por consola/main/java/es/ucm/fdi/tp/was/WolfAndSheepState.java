@@ -208,7 +208,7 @@ public class WolfAndSheepState extends GameState<WolfAndSheepState, WolfAndSheep
         for (int i = 0; i < board.length; i++) {
             sb.append("|");
             for (int j = 0; j < board.length; j++) {
-                sb.append(board[i][j] == EMPTY ? " � " : board[i][j] == 0 ? " M " : " O ");
+                sb.append(board[i][j] == EMPTY ? " · " : board[i][j] == 0 ? " X " : " O ");
             }
             sb.append("|");
             sb.append("\n");
