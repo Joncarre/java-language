@@ -10,8 +10,7 @@ Se trata de implementar una versión reducida del algoritmo A estrella. El objet
 
 Consideremos la figura mostrada, en la que la posición de inicio es (1,1). El único nodo sucesor en este caso es (1,2), no existe otra posibilidad de elección. Esto ocurre hasta que el vehículo alcanza la posición (2,5).
 
-IMAGEN
-
+![enter image description here]()
 
 Llegados a la posición (2,5), existen dos posibles sucesores de (2,5), que son (3,4) y (3,5). Evaluemos las funciones f(n) para cada uno de ellos suponiendo que las dimensiones de los cuadrados son 1x1.
 
@@ -31,8 +30,8 @@ En el caso anterior, el nodo elegido sería el (3,4) como el sucesor del (2,4).
 
 Al comenzar debemos especificar las dimensiones que tendrá nuestra matriz, puntos de inicio y fin y si queremos que haya obstáculos a lo largo del camino.
 
-IMAGEN
+![enter image description here]()
 
 Después, tan sólo queda ver cómo el algoritmo realiza las expansiones para encontrar el camino mínimo hasta el punto de aterrizaje. Por cada expansión, el programa imprime una vez el estado actual de la matriz y sus elementos, finalizando y mostrando el recorrido hecho.
 
-IMAGEN
+![enter image description here]()
