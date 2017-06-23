@@ -26,3 +26,13 @@ Llegados a la posición (2,5), existen dos posibles sucesores de (2,5), que son 
 - f(n) = 5.41 + 3.61 = 9.02
 
 En el caso anterior, el nodo elegido sería el (3,4) como el sucesor del (2,4).
+
+**Ejemplo de ejecución**
+
+Al comenzar debemos especificar las dimensiones que tendrá nuestra matriz, puntos de inicio y fin y si queremos que haya obstáculos a lo largo del camino.
+
+IMAGEN
+
+Después, tan sólo queda ver cómo el algoritmo realiza las expansiones para encontrar el camino mínimo hasta el punto de aterrizaje. Por cada expansión, el programa imprime una vez el estado actual de la matriz y sus elementos, finalizando y mostrando el recorrido hecho.
+
+IMAGEN
