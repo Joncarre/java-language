@@ -23,6 +23,6 @@ El objetivo básicamente en la partición de un conjunto de n observaciones en k
 
 **Ejemplo de ejecución**
 
-En la siguiente imagen observamos las dos primeras iteraciones del algoritmo. En ella se puede observar los valores de los centros iniciales, la matriz de pertenencia calculada (que tiene mxn dimensión donde m es el número de clases y n es el número de muestras), el recálculo de los centros y la comprobación del valor epsilon. En este ejemplo concreto, aunque no aparece en la imagen, el algoritmo detiene su ejecución en la iteración 4.
+En la siguiente imagen observamos las dos primeras iteraciones del algoritmo. En ella se puede observar los valores de los centros iniciales, la matriz de pertenencia calculada (que aparece incompleta ya que tiene mxn dimensión donde m es el número de clases y n es el número de muestras), el recálculo de los centros y la comprobación del valor epsilon. En este ejemplo concreto, aunque no aparece en la imagen, el algoritmo detiene su ejecución en la iteración 4.
 
 ![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Ingenier%C3%ADa%20del%20Conocimiento/images/IC4_1.png)
