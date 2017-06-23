@@ -6,7 +6,7 @@
 
 **Descripción**
 
-El objetivo básicamente en la partición de un conjunto de n observaciones en k grupos en el que cada observación pertenece al grupo cuyo valor medio es más cercano. Los pasos que realiza el algoritmo son los siguientes:
+El objetivo básicamente es la partición de un conjunto de n observaciones en k grupos en el que cada observación pertenece al grupo cuyo valor medio es más cercano. Los pasos que realiza el algoritmo son los siguientes:
 
 - **1.** Se leen de fichero los datos para extraer el número de muestras *n* a utilizar y el número de clases *c*.
 - **2.** Se inicializan los centro de las clases *v*i y las probabilidades i = 1 hasta *c* y j = 1 hasta *n*.
