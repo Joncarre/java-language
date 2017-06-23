@@ -24,7 +24,7 @@ Tanto al Tic-Tac-Toe como a El lobo y las ovejas se podrá jugar con la siguient
  
 donde [juego] puede ser *ttt* (para Tic-Tac-Toe) o *was* (WolfAndSheep) y [jugador] puede ser *console*, *random* o *smart*. A continuación se muestra un ejemplo donde se juega a WolfAndSheep, el primer jugador es un usuario y el segundo es un jugador inteligente.
 
-![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Programaci%C3%B3n%20en%20Java/Juegos%20usando%20MVC/images/4_4.png)
+![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Programaci%C3%B3n%20en%20Java/Juegos%20usando%20MVC/images/4_3.png)
 
 Ya que en esta primera versión el juego tan sólo es por consola, notemos que los movimientos posible ya nos los dan y nosotros sólo debemos decidir dónde mover. A modo de ejemplo veamos el primer movimiento de un lobo en modo console y cómo un jugador smart responde a dicha jugada.
 
