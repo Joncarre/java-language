@@ -2,18 +2,18 @@
 
 **Modelo simplificado de plegado de proteínas Hydrophobic-Polar**
 ==============
+--------------
 
+**Descripción**
 
-**Nuevas instrucciones**
+El modelo de plegamiento de proteínas Hydrophobic-Polar es un modelo altamente simplificado para examinar los pliegues de proteínas en el espacio. Propuesto por primera vez por Ken Dill en 1985, es el tipo más conocido de proteína de red: se deriva de la observación de que las interacciones hidrófobas entre los residuos de aminoácidos son la fuerza impulsora para que las proteínas se plieguen en su estado nativo.
 
-En esta nueva versión el comando BYTECODE permite al usuario introducir en orden las distintas instrucciones que componen un programa bytecode. Cuando el usuario haya terminado de escribir todas las instrucciones, tecleará "END" (que no es una instrucción bytecode).
+Todos los tipos de aminoácidos se clasifican como hidrofóbicos (H) o polares (P), y el plegamiento de una secuencia de proteínas se define como una caminata auto evitada en una red 2D o 3D. El modelo HP imita el efecto hidrofóbico asignando un peso negativo (favorable) a las interacciones entre los residuos H adyacentes, no unidos covalentemente. Se supone que las proteínas que tienen energía mínima están en su estado nativo.
 
-Por otro lado, las nuevas instrucciones bytecode que se incorporan son las siguientes:
+El modelo HP se puede expresar en dos y tres dimensiones, generalmente con redes cuadradas , aunque también se han utilizado redes triangulares.
 
-- *Instrucciones de salto condicional*: habrá cuatro instrucciones de este tipo, que son IFEQ N, IFLE N, IFLEQ N y IFNEQ N. Estas instrucciones cogen la subcima -sc- y la cima -c- de la pila y comparan sus valores enteros. En función de qué tipo de condición sea, si se hace verdadera, entonces continua su flujo, pero si la condición es falsa, entonces salta a la instrucción N.
+A pesar de que el modelo HP abstrae muchos de los detalles del plegamiento de proteínas, sigue siendo un problema NP-difícil en las redes 2D y 3D.
 
-- *Instrucción de salto incondicional*: esta instrucción, cuya sintaxis es GOTO N, provoca un cambio en el contador de programa de la cpu, que pasa a ser N.
-
-**Ejemplo de ejecución**
+**Ejemplos de ejecución**
 
 Veamos un ejemplo en el que un programa bytecode calcula el factorial de 5. El texto en verde representa lo que el usuario introduce por teclado.
