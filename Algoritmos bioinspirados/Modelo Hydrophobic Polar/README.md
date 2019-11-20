@@ -14,6 +14,3 @@ El modelo HP se puede expresar en dos y tres dimensiones, generalmente con redes
 
 A pesar de que el modelo HP abstrae muchos de los detalles del plegamiento de proteínas, sigue siendo un problema NP-difícil en las redes 2D y 3D.
 
-**Ejemplos de ejecución**
-
-Veamos un ejemplo en el que un programa bytecode calcula el factorial de 5. El texto en verde representa lo que el usuario introduce por teclado.
