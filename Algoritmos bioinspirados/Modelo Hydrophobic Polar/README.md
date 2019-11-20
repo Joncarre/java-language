@@ -1,8 +1,8 @@
 <!--Creado por Jonathan Carrero -->
 
-**Añadidas instrucciones de salto**
+**Modelo simplificado de plegado de proteínas Hydrophobic-Polar**
 ==============
-----------
+
 
 **Nuevas instrucciones**
 
