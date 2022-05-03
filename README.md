@@ -1,7 +1,7 @@
 # Java
 
-Bienvenid@,
+Welcome,
 
-Aquí podrás encontrar todos los proyectos que he realizado utilizando el lenguaje de programación Java. Si tienes cualquier duda o sugerencia no dudes en contactar conmigo.
+Here you can find all the projects I have done using the Java programming language. If you have any doubt or suggestion, don't hesitate to contact me.
 
-¡Un saludo!
+Best regards!
