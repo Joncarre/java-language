@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;user_R_0.txt&apos; to &apos;user_R_0.txt&apos;&#x0D;&#x0A;- Original project: &apos;Egalitarian_project&apos;&#x0D;&#x0A;- Destination element: &apos;user_R_0.txt&apos;&#x0D;&#x0A;- Original element: &apos;user_R_0.txt&apos;" description="Copy file" element1="src/data/file/user_R_0.txt" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1602282384609" target="/Egalitarian_project/src/data/file/user_R_0.txt" units="0" version="1.0"/>
-</session>
