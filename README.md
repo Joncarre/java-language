@@ -17,3 +17,6 @@ You can explore projects primarily in these areas:
 Feel free to browse the code! If you have any questions, suggestions, or feedback, please don't hesitate to reach out.
 
 Best regards! 😊
+
+---
+*Created by Jonathan Carrero*

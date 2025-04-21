@@ -1,9 +1,11 @@
-<!--Creado por Jonathan Carrero -->
+<!-- Created by Jonathan Carrero -->
 
-**¿Qué proyectos hay?**
+# Programming Technology Projects 💻🕹️
 
-En este apartado de programación nos encontramos con, de momento, los siguientes proyectos:
+## What projects are here?
 
-- *Máquina Virtual:* se implementa una Máquina Virtual sencilla a la que poco a poco se le van añadiendo funcionalidades hasta que incluso es capaz de leer de fichero un programa escrito en un lenguaje imperativo simple para poder compilarlo y ejecutarlo.
+In this programming section, you'll currently find the following projects:
 
-- *Juegos usando MVC:* nos encontramos con una serie de juegos implementados mediante Modelo-Vista-Controlador que en una primera versión son por consola y después se les añade una interfaz gráfica gracias a Swing.
+*   **[Virtual Machine](./Máquina%20Virtual/)** ⚙️: Implements a simple Virtual Machine. Functionality is gradually added across versions, eventually enabling it to load, compile, and execute programs written in a basic imperative language from a file.
+
+*   **[Games using MVC](./Juegos%20usando%20MVC/)** 🎮: Features a series of games implemented using the Model-View-Controller (MVC) pattern. The initial versions are console-based, with later versions incorporating a graphical user interface (GUI) using Java Swing.
