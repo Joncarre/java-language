@@ -1,20 +1,22 @@
-<!--Creado por Jonathan Carrero -->
+<!-- Created by Jonathan Carrero -->
 
-**Modelo de plegado de proteínas Hydrophobic-Polar implementado con algoritmo genético**
-==============
---------------
+# Hydrophobic-Polar Protein Folding Model using Genetic Algorithm (GA) 🧬 + PSO Concepts
 
-**Descripción**
+---
 
-Como extensión al proyecto básico que de manera recursiva trataba de encontrar el plegado más eficiente bajo el modelo Hydrophobic-Polar, esta nueva implementación pretende mezclar las principales ideas que están detrás del funcionamiento de los algoritmos genéticos con el desplazamiento de individuos (algoritmos PSO). El proyecto consta de cinco clases. A continuación podemos ver un pequeño resumen de qué es lo que hace cada una de ellas.
+## Description
 
-*Main*: es la clase que crea un objetivo de tipo Engine, el cual se encargará de llevar a cabo la ejecución del algoritmo. Es una buena práctica que todo programa tenga como entrada su correspondiente clase Main pero que esta no esté sobrecargada de métodos.
+This project extends the basic [Hydrophobic-Polar model](../Hydrophobic%20Polar%20basic%20model) implementation (which recursively sought the most efficient fold) by incorporating ideas from **Genetic Algorithms (GA)** and **Particle Swarm Optimization (PSO)** 🐦. The goal is to find optimal protein folding configurations using these bio-inspired techniques.
 
-*Engine*: se encarga de crear una población e imprimirla cuando sea necesario (e.d. al finalizar cada evolución de la población).
+The project consists of five main Java classes. Here's a brief overview of each:
 
-*Population*: esta clase es la que realiza el mayor trabajo durante la población, llevando a cabo la fase principal: el movimiento. El movimiento consiste en desplazar a los individuos a través de la matriz hacia el supuesto Fittest de la población. Este movimiento depende de parámetros como: temperatura de los individuos (aminoácidos), distancia hasta el Fittest, valor actual del propio fitness, etc.
+*   `Main`: The entry point of the program. It creates an `Engine` object responsible for executing the algorithm. Following good practice, this class is kept simple and delegates the main work.
 
-*Individual*: contiene los atributos necesarios de todo individuo (como por ejemplo las coordenadas en las que se encuentra). También posee sus respectivos setters y getters para modificar/acceder a dichos atributos.
+*   `Engine`: Manages the overall process. It initializes the population and handles the evolutionary loop, printing population status as needed (e.g., after each generation/evolution step).
 
-*Location*: objetivo en el que se define las coordenadas que tienen los individuos para identificar su localización. 
+*   `Population`: This class performs the core evolutionary operations. It manages the collection of individuals and implements the main phase: *movement* or *evolution*. This involves updating individuals' positions (potential folds) based on PSO-like concepts, moving them towards promising areas of the search space (guided by the 'fittest' individual found so far). Movement logic considers factors like individual fitness, distance to the best-known solution, and potentially other parameters (analogous to velocity/inertia in PSO).
+
+*   `Individual`: Represents a single potential solution (a specific protein fold). It holds necessary attributes like the sequence conformation (coordinates of amino acids) and its calculated fitness score. It also includes standard getters and setters for accessing/modifying these attributes.
+
+*   `Location`: A helper class likely used to define and manage the coordinates (position) of amino acids within the lattice structure for an `Individual`.
 

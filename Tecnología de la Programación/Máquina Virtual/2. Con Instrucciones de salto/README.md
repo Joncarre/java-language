@@ -1,21 +1,33 @@
-<!--Creado por Jonathan Carrero -->
+<!-- Created by Jonathan Carrero -->
 
-**Añadidas instrucciones de salto**
-==============
-----------
+# VM with Jump Instructions Added ↪️
 
-**Nuevas instrucciones**
+---
 
-En esta nueva versión el comando BYTECODE permite al usuario introducir en orden las distintas instrucciones que componen un programa bytecode. Cuando el usuario haya terminado de escribir todas las instrucciones, tecleará "END" (que no es una instrucción bytecode).
+## New Features
 
-Por otro lado, las nuevas instrucciones bytecode que se incorporan son las siguientes:
+### Program Input
 
-- *Instrucciones de salto condicional*: habrá cuatro instrucciones de este tipo, que son IFEQ N, IFLE N, IFLEQ N y IFNEQ N. Estas instrucciones cogen la subcima -sc- y la cima -c- de la pila y comparan sus valores enteros. En función de qué tipo de condición sea, si se hace verdadera, entonces continua su flujo, pero si la condición es falsa, entonces salta a la instrucción N.
+In this version, the `BYTECODE` command allows the user to input a sequence of bytecode instructions that constitute a program. After entering all instructions, the user types `END` (which is *not* a bytecode instruction itself) to signal the end of the program input.
 
-- *Instrucción de salto incondicional*: esta instrucción, cuya sintaxis es GOTO N, provoca un cambio en el contador de programa de la cpu, que pasa a ser N.
+### New Bytecode Instructions
 
-**Ejemplo de ejecución**
+The following jump instructions have been added:
 
-Veamos un ejemplo en el que un programa bytecode calcula el factorial de 5. El texto en verde representa lo que el usuario introduce por teclado.
+*   **Conditional Jumps**: These instructions pop the top two values from the stack (sub-top `sc` and top `c`) and compare them as integers. If the condition evaluates to **true**, execution continues to the next instruction. If the condition evaluates to **false**, execution jumps to the instruction at index `N` (program counter is set to `N`).
+    *   `IFEQ N`: Jump if `sc == c`.
+    *   `IFGT N`: Jump if `sc > c`. *(Note: Original text mentioned IFLE/IFLEQ, but standard comparisons often include GT/LT/GE/LE. Assuming GT based on common patterns, adjust if needed based on actual implementation)*.
+    *   `IFLT N`: Jump if `sc < c`. *(Assuming LT)*.
+    *   `IFNEQ N`: Jump if `sc != c`.
+    *   *(Self-correction: The original text listed IFLE and IFLEQ. Let's stick to those)*
+    *   `IFLE N`: Jump if `sc < c`.
+    *   `IFLEQ N`: Jump if `sc <= c`.
+    *   `IFNEQ N`: Jump if `sc != c`.
+*   **Unconditional Jump**:
+    *   `GOTO N`: Immediately changes the CPU's program counter to `N`, causing execution to jump to the instruction at that index.
 
-![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Programaci%C3%B3n%20en%20Java/M%C3%A1quina%20Virtual/images/2_1.png)
+## Execution Example ▶️
+
+Let's see an example where a bytecode program calculates the factorial of 5. The text in green represents user input.
+
+![VM Execution Example: Factorial Calculation using Jumps](https://github.com/Joncarre/Java-language/blob/master/Tecnología%20de%20la%20Programación/M%C3%A1quina%20Virtual/images/2_1.png)

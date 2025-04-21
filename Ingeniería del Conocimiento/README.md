@@ -1,13 +1,13 @@
-<!--Creado por Jonathan Carrero -->
+<!-- Created by Jonathan Carrero -->
 
-**¿Qué proyectos hay?**
+# Knowledge Engineering Projects 🧠💡
 
-En este apartado de Ingeniería del Conocimiento nos encontramos con los siguientes proyectos:
+This section contains the following Knowledge Engineering projects:
 
-- *Algoritmo A Estrella*: implementación reducida del algoritmo A estrella en el que se simula una nave que debe despegar desde un determinado punto en una matriz de celdas y aterrizar en otro distinto. En el trayecto puede haber obstáculos que deberá esquivar.
+*   **[A\* Algorithm](./Algoritmo%20A%20Estrella/)** 🗺️: A simplified implementation of the A\* search algorithm. It simulates a vehicle navigating a grid from a start point to a target point, potentially avoiding obstacles.
 
-- *Árbol ID3*: es un algoritmo usado sobre todo en IA cuyo uso se engloba en la búsqueda de hipótesis o reglas en él, dado un conjunto de ejemplos. Este conjunto deberá estar conformado por una serie de tuplas de valores, cada uno de ellos denominados atributos, en el que uno de ellos, es el objetivo, el cual es de tipo binario.
+*   **[ID3 Tree](./Árbol%20ID3/)** 🌳: An implementation focusing on the first step of the ID3 algorithm, used in AI for finding rules or hypotheses from a dataset. It selects the best initial attribute to split the data based on examples (tuples of attribute values) with a binary target attribute. *(Note: This version is not fully recursive)*.
 
-- *Aprendizaje con agrupamiento K-Medias*: es un método de agrupamiento, que tiene como objetivo la partición de un conjunto de n observaciones en k grupos en el que cada observación pertenece al grupo cuyo valor medio es más cercano. Es un método muy empleado en minería de datos.
+*   **[K-Means Clustering](./Aprendizaje%20con%20agrupamiento%20K-Medias/)** 📊: Implements the K-Means clustering method. Its goal is to partition *n* observations into *k* clusters, where each observation belongs to the cluster with the nearest mean (centroid). Widely used in data mining.
 
-- *Aprendizaje con estimación paramétrica de Bayes*: es otro de los métodos de agrupamiento conocidos. La forma para realizar los cálculos es ligeramente distinta a K-Medias.
+*   **[Bayesian Parametric Estimation/Classification](./Aprendizaje%20con%20estimación%20paramétrica%20de%20Bayes/)** 📈: Implements classification based on parametric estimation, likely assuming Gaussian distributions for classes. It estimates parameters (mean, covariance) from labeled data and uses them to classify new instances. The calculation approach differs from K-Means.

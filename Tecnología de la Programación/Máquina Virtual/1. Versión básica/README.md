@@ -1,37 +1,47 @@
-<!--Creado por Jonathan Carrero -->
+<!-- Created by Jonathan Carrero -->
 
-**Versión básica**
-==============
-----------
+# Basic Virtual Machine (Stack-Based) 💻⚙️
 
-**Introducción**
+---
 
-Una máquina virtual es un software que simula a un ordenador y que puede ejecutar programas como si fuese un ordenador real. Puedes encontrar más información en http://es.wikipedia.org/wiki/Maquina_virtual. El ordenador simulado puede ejecutar programas como si se tratase de un ordenador real. Este tipo de aplicaciones tiene diferentes usos aunque el más extendido es la “prueba” de sistemas operativos sin tener que cambiar el que utilizan habitualmente. La máquina virtual que se presenta es una máquina de pila, cuyos principales componentes son una *pila de operandos* y una *memoria*. La pila de operandos almacena los datos que se generan durante la ejecución mientras que en la memoria podemos almacenar algunos de esos datos. Es decir, la memoria sería similar a una tabla de variables de un programa.
+## Introduction
 
-**Descripción**
+A **virtual machine (VM)** is software that simulates a computer system and can execute programs as if it were a real computer. (For more general info, see Wikipedia: [https://en.wikipedia.org/wiki/Virtual_machine](https://en.wikipedia.org/wiki/Virtual_machine)). VMs have various uses, with one common application being testing operating systems without altering the host system.
 
-La Máquina Virtual está compuesta de dos partes muy simples:
+The VM presented here is a **stack machine**. Its main components are an *operand stack* and a *memory* area.
+*   The **operand stack** stores intermediate data generated during execution.
+*   The **memory** allows storing some of this data, acting similarly to a program's variable table.
 
-- Una *memoria* capaz de almacenar datos. La unidad mínima de memoria es el entero, es decir en cada celda almacena un entero completo (y no un byte como suele ocurrir en las máquinas reales). La capacidad de la memoria es *ilimitada*, es decir se podrá  escribir en cualquier dirección (≥ 0), hasta que la memoria de la máquina física subyacente “aguante”.
+## Description
 
-- Una *pila de operandos* en la que se realizan las operaciones. Gran parte de las distin- tas instrucciones bytecode de la máquina virtual trabajan sobre la pila de operandos, cogiendo de ella valores y/o dejando en ella resultados.
+This Virtual Machine consists of two simple parts:
 
-El conjunto de instrucciones bytecode que la Máquina Virtual en su primera versión admite son:
+*   **Memory**: Capable of storing integer data. The minimum unit is an integer (unlike real machines which often use bytes). Memory capacity is conceptually *unlimited*; you can write to any address (≥ 0) up to the limits of the underlying physical machine's memory.
+*   **Operand Stack**: Where operations are performed. Most bytecode instructions operate on this stack, consuming values from it and/or pushing results onto it.
 
-- PUSH n: apila en la pila de operandos el entero n.
-- LOAD pos: lee de la memoria el valor almacenado en pos y lo apila en la pila de operandos.
-- STORE pos: escribe en la posición pos de la memoria el contenido de la cima de la pila de operandos, y lo elimina de ella. 
-- ADD, SUB, MUL, DIV: operaciones aritméticas de suma, resta, multiplicación y división. Todas ellas utilizan como operandos la subcima y la cima de la pila. Tanto la cima como la subcima son sustituidas por el resultado de la operación. El primer operando es la subcima (esto es importante para las operaciones no conmutativas).
-- OUT: escribe el entero almacenado en la cima de la pila.
-- HALT: para la máquina.
+### Supported Bytecode Instructions
 
-**Ejemplo de ejecución**
+This initial version of the VM supports the following bytecode instructions:
 
-A continuación mostramos un ejemplo de ejecución de nuestra simulación. Observa que los comandos e instrucciones bytecode no son sensibles a mayúsculas ni minúsculas (puedes escribirlas indistintamente). Eso sí, cuando la aplicación tiene que mostrar una instrucción o un bytecode, lo hará utilizando mayúsculas.
+*   `PUSH n`: Pushes the integer `n` onto the operand stack.
+*   `LOAD pos`: Reads the value stored at memory address `pos` and pushes it onto the operand stack.
+*   `STORE pos`: Pops the top value from the operand stack and writes it to memory address `pos`.
+*   `ADD`, `SUB`, `MUL`, `DIV`: Arithmetic operations (Sum, Subtract, Multiply, Divide).
+    *   They use the top two values on the stack as operands (sub-top and top).
+    *   Both operands are popped, and the result is pushed back onto the stack.
+    *   The *first* operand is the sub-top value (important for non-commutative operations like SUB and DIV).
+*   `OUT`: Pops the top value from the stack and prints it to the console.
+*   `HALT`: Stops the VM execution.
 
-En el momento de mostrar el estado de la máquina, la aplicación muestra la pila y la memoria tras la ejecución de cada bytecode. Si no tienen elementos, se indica <vacia>. En el caso de la memoria eso viene a significar que alguna celda de memoria ha sido escrita en algún momento. Sólo se mostrará el contenido de las posiciones de memoria que están ocupadas.
+## Execution Example ▶️
 
-A continuación aparece un ejemplo de ejecución. El texto en verde representa lo que el usuario de la aplicación introduce por teclado.
+Below is an example of running a simulation on this VM. Note that commands and bytecode instructions are **case-insensitive** (you can type them in upper or lower case). However, when the application displays instructions or bytecode, it will use uppercase.
 
-![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Programaci%C3%B3n%20en%20Java/M%C3%A1quina%20Virtual/images/1_1.png)
+When displaying the machine's state, the application shows the contents of the **stack** and **memory** after each bytecode instruction executes.
+*   If either is empty, it's indicated as `<vacia>` (empty).
+*   For memory, only occupied positions (those that have been written to at some point) are displayed.
+
+Here's an execution example. The text in green represents user input typed into the console.
+
+![Basic VM Execution Example](https://github.com/Joncarre/Java-language/blob/master/Tecnología%20de%20la%20Programación/M%C3%A1quina%20Virtual/images/1_1.png)
 

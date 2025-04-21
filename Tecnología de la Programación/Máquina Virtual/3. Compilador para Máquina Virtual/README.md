@@ -1,50 +1,59 @@
-<!--Creado por Jonathan Carrero -->
+<!-- Created by Jonathan Carrero -->
 
-**Compilador para Máquina Virtual**
-==============
-----------
+# Compiler for Virtual Machine 📜➡️⚙️
 
-**Descripción**
+---
 
-En esta versión vamos a permitir que el usuario escriba programas en un lenguaje imperativo simple, de forma que estos programas sean traducidos a programas bytecode que más tarde ejecutará la Máquina Virtual.
+## Description
 
-Los programas fuentes escritos en un fichero deben cumplir además los siguientes requisitos
-sintácticos:
+This version introduces a **compiler**, allowing users to write programs in a **simple imperative language**. These source programs are then translated (compiled) into bytecode that the Virtual Machine can execute.
 
-- Cada asignación o instrucción write debe aparecer en una línea.
-- No puede haber líneas en blanco en ningún sitio del fichero, ni tampoco al principio ni al final del mismo.
+### Source Language Syntax Requirements
 
-A continuación muestro un programa correcto que calcula en la variable r el factorial de 5 y lo muestra por pantalla.
+Source programs written in a file must adhere to the following syntax rules:
 
-    x = 5
-    r = 1
-    while 0 < x
-	    r = r * x
-	    x = x - 1
-    endwhile
-    write r
-    end
-    
-El esta nueva versión el conjunto de comandos disponibles es el siguiente:
+*   Each assignment (`variable = expression`) or `write` instruction must be on its own line.
+*   There should be **no blank lines** anywhere in the file, including at the beginning or end.
+*   The program must end with an `end` statement.
+*   Supported constructs include variable assignment, simple arithmetic expressions, `while` loops, and `write` for output.
 
-- HELP: muestra la ayuda correspondiente a los comandos que describiremos a continuación.
-- QUIT: cierra la aplicación.
-- LOAD FICH: carga el fichero de nombre FICH como programa fuente. No realiza ningún tipo de comprobación sintáctica.
-- REPLACEBC N: solicita al usuario una nueva instrucción bytecode y reemplaza la línea N del programa bytecode por la nueva instrucción introducida por el usuario.
-- COMPILE: realiza el análisis léxico del programa fuente, generando un nuevo programa parseado y, posteriormente a partir del programa parseado genera un programa bytecode.
-- RUN: ejecuta el programa bytecode igual que en la Práctica 2.
+Here is an example of a valid program that calculates the factorial of 5 (stored in variable `r`) and prints the result:
 
-**Ejemplo de ejecución**
+```
+x = 5
+r = 1
+while 0 < x
+    r = r * x
+    x = x - 1
+endwhile
+write r
+end
+```
 
-Ya vimos en la versión anterior que podíamos insertar instrucciones para tener nuestro propio programa bytecode. Aquí, eso mismo se conseguira pero en una segunda fase. Como muestra la siguiente imagen, primero debemos cargar un programa escrito en lenguaje imperativo simple para saber si, apartir de ese programa, es posible transformarlo en un programa bytecode.
+### Available Commands
 
-![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Programaci%C3%B3n%20en%20Java/M%C3%A1quina%20Virtual/images/3_1.png)
+The set of commands available in this version is:
 
-En segundo lugar debemos compilar el programa. En esta fase se analiza que las instrucciones son correctas, es decir que, por ejemplo, no hay saltos a instrucciones que no existen.
+*   `HELP`: Displays help information for the available commands.
+*   `QUIT`: Exits the application.
+*   `LOAD FICH`: Loads the file named `FICH` as the source program. *Note: This command might not perform syntax checking.*
+*   `REPLACEBC N`: Prompts the user for a new bytecode instruction and replaces the instruction at line `N` of the *current bytecode program* (if one exists).
+*   `COMPILE`: Performs lexical analysis and parsing of the loaded source program, generating a corresponding bytecode program.
+*   `RUN`: Executes the current bytecode program (similar to the previous version).
 
-![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Programaci%C3%B3n%20en%20Java/M%C3%A1quina%20Virtual/images/3_2.png)
+## Execution Example ▶️
 
-Por último, una vez compilado, ya podemos llevar a cabo la ejecución del programa. En este caso, volvemos a calcular el factorial de 5. El texto en verde representa lo que el usuario de la aplicación introduce por teclado.
+While the previous version allowed direct input of bytecode instructions, this version introduces a two-phase process: loading/compiling a source file first.
 
-![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Programaci%C3%B3n%20en%20Java/M%C3%A1quina%20Virtual/images/3_3.png)
+1.  **Load Source Program**: First, we load a program written in the simple imperative language using the `LOAD` command. This step reads the source code from the specified file.
+
+    ![Compiler Execution: Loading the source file](https://github.com/Joncarre/Java-language/blob/master/Tecnología%20de%20la%20Programación/M%C3%A1quina%20Virtual/images/3_1.png)
+
+2.  **Compile Program**: Next, we use the `COMPILE` command. This phase analyzes the source code for correctness (parsing) and translates it into the equivalent VM bytecode instructions. Error checking (e.g., for invalid syntax or jumps) occurs here.
+
+    ![Compiler Execution: Compiling the source code to bytecode](https://github.com/Joncarre/Java-language/blob/master/Tecnología%20de%20la%20Programación/M%C3%A1quina%20Virtual/images/3_2.png)
+
+3.  **Run Bytecode**: Finally, once the program is successfully compiled into bytecode, we can execute it using the `RUN` command. In this example, the compiled bytecode calculates the factorial of 5. User input is shown in green.
+
+    ![Compiler Execution: Running the compiled bytecode (Factorial 5)](https://github.com/Joncarre/Java-language/blob/master/Tecnología%20de%20la%20Programación/M%C3%A1quina%20Virtual/images/3_3.png)
 

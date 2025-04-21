@@ -1,56 +1,78 @@
-<!--Creado por Jonathan Carrero -->
+<!-- Created by Jonathan Carrero -->
 
-**El lobo y las ovejas**
-==============
-----------
+# Wolf and Sheep (Console Version) 🐺🐑🎮
 
-**Descripción**
+---
 
-En esta primera versión del proyecto nos encontramos con dos juegos:
+## Description
 
-- *Tic-Tac-Toe*: este juego es el famoso tres en raya. Hay un tablero de nxn (donde en principio será un 3x3) en el que los jugadores van poniendo fichas y altarnándose los turnos. Un jugador gana si consigue tener una línea de tres de sus símbolos: la línea puede ser horizontal, vertical o diagonal
+This initial version of the project includes two console-based games:
 
-- *El lobo y las ovejas*: para este juego jugaremos, en principio, en un tablero 8x8 similar al usado para el ajedrez, donde sólo se usarán las casillas negras (ver ilustración más abajo). Las ovejas se sitúan en las casillas negras de un extremo, mientras que el lobo ocupa la esquina opuesta. El juego transcurre por turnos, empezando a mover el jugador que controla al lobo. El lobo puede moverse, en diagonal, 1 casilla en cualquier dirección. Las ovejas pueden moverse, también en diagonal, 1 casilla; pero sólo avanzando hacia el lado opuesto a su posición inicial. El lobo gana si consigue alcanzar el extremo del tablero en el que empezaban las ovejas. Las ovejas ganan si consiguen que el lobo quede inmovilizado. Se supone que el jugador 0 es el que controla el lobo, y el jugador 1 es el que controla la ovejas.
+*   **Tic-Tac-Toe**: The classic game. Played on an NxN board (typically 3x3), players take turns placing their marks. A player wins by getting three of their marks in a row, horizontally, vertically, or diagonally.
 
-Tanto al Tic-Tac-Toe como a El lobo y las ovejas se podrá jugar con la siguiente combinación de jugadores:
+*   **Wolf and Sheep (Was)**: Played on an 8x8 board (like a chessboard), using only the dark squares. Four sheep start on the dark squares at one end, and one wolf starts on a dark square at the opposite end.
+    *   **Turns**: Players alternate turns, with the wolf (Player 0) moving first.
+    *   **Movement**:
+        *   The wolf moves one diagonal square in *any* direction (forward or backward).
+        *   Sheep move one diagonal square *only forward* (towards the wolf's starting side).
+    *   **Winning Conditions**:
+        *   The **wolf wins** if it reaches the sheep's starting row.
+        *   The **sheep win** if they trap the wolf so it cannot make a valid move.
 
- - console: en este modo es el propio usuario quien realiza las jugadas.
- - random: un jugador totalmente aleatorio realizará las jugadas.
- - smart: un jugador inteligente (gracias sobre todo a una clase que implementa un árbol Minimax) realizará las jugadas.
- 
- Esta configuración se debe realizar dentro de Run > Run Configurations...(Eclipse). Y su sintaxis es la siguiente:
- 
- *juego jugador1 jugador2*
- 
-donde [juego] puede ser *ttt* (para Tic-Tac-Toe) o *was* (WolfAndSheep) y [jugador] puede ser *console*, *random* o *smart*. A continuación se muestra un ejemplo donde se juega a WolfAndSheep, el primer jugador es un usuario y el segundo es un jugador inteligente.
+### Player Types
 
-![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Programaci%C3%B3n%20en%20Java/Juegos%20usando%20MVC/images/4_3.png)
+Both Tic-Tac-Toe and Wolf and Sheep can be played with the following player combinations:
 
-Ya que en esta primera versión el juego tan sólo es por consola, notemos que los movimientos posible ya nos los dan y nosotros sólo debemos decidir dónde mover. A modo de ejemplo veamos el primer movimiento de un lobo en modo console y cómo un jugador smart responde a dicha jugada.
+*   `console`: The user inputs moves via the console.
+*   `random`: A player making completely random valid moves.
+*   `smart`: An intelligent player using a **Minimax** algorithm (implemented in a dedicated class) to determine the best move.
 
-![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Programaci%C3%B3n%20en%20Java/Juegos%20usando%20MVC/images/4_1.png)
+### Running the Game
 
-También podemos observar un final de partida. En este caso, las ovejas han logrado acorralar al lobo y, por lo tanto, han ganado la partida.
+Configure the game execution via `Run > Run Configurations...` in Eclipse. The command-line syntax is:
 
-![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Programaci%C3%B3n%20en%20Java/Juegos%20usando%20MVC/images/4_2.png)
+```bash
+game player1 player2
+```
 
-**JUnit**
+Where:
+*   `[game]` can be `ttt` (Tic-Tac-Toe) or `was` (Wolf and Sheep).
+*   `[player]` can be `console`, `random`, or `smart`.
 
-Las pruebas unitarias son una forma de verificar que los métodos de las clases funcionan como se espera. Se llaman unitarias porque prueban las unidades más pequeñas que tiene sentido probar en aislamiento unas de otras (en oposición a las pruebas de integración, que verifican que todo funciona una vez juntado). Usaremos la librería JUnit, que cuenta con soporte tanto Maven como Eclipse, para escribir y ejecutar pruebas unitarias en nuestras prácticas.
+Below is an example configuration for Wolf and Sheep, with a human (`console`) playing as the wolf (Player 1) against the smart AI (`smart`) as the sheep (Player 2).
 
-Puedes encontrar más información para instalar y realizar pruebas JUnit en el siguiente enlace: http://junit.org/junit4/
+![Eclipse Run Configuration Example for Was (console vs smart)](https://github.com/Joncarre/Java-language/blob/master/Tecnología%20de%20la%20Programación/Juegos%20usando%20MVC/images/4_3.png)
 
-Las pruebas llevadas a cabo son las siguientes:
+### Console Gameplay Example
 
-- Un lobo rodeado resulta en victoria de las ovejas.
-- Un lobo en una casilla con y = 0 resulta en victoria del lobo.
-- Un lobo en su posición inicial sólo tiene 1 acción válida; y tras llevarla a cabo, en su siguiente turno, tiene 4 acciones válidas.
-- Una oveja en su posición inicial tiene 2 acciones válidas; y si está en un lateral, tiene 2 acciones válidas.
-- Proporcionar menos de 3 argumentos ó demasiados argumentos (más jugadores de los que acepta el juego) resulta en un error.
-- Proporcionar un juego inválido como primer argumento resulta en un error.
+Since this version is console-only, the game displays the current board state and lists the available moves for the current player. The user (if playing as `console`) selects a move from the list.
 
-A modo de ejemplo, veamos el código correspondiente a la segunda prueba (lobo en casilla y = 0 resulta victorioso):
+Here's an example showing the wolf's first move (as `console`) and the `smart` sheep player's response:
 
-![enter image description here](https://github.com/Joncarre/Java-language/blob/master/Programaci%C3%B3n%20en%20Java/Juegos%20usando%20MVC/images/4_4.png)
+![Console Gameplay: Wolf's first move and Smart Sheep response](https://github.com/Joncarre/Java-language/blob/master/Tecnología%20de%20la%20Programación/Juegos%20usando%20MVC/images/4_1.png)
+
+We can also see an example of a game ending. In this case, the sheep have successfully cornered the wolf, resulting in a win for the sheep.
+
+![Console Gameplay: Sheep win by trapping the wolf](https://github.com/Joncarre/Java-language/blob/master/Tecnología%20de%20la%20Programación/Juegos%20usando%20MVC/images/4_2.png)
+
+## JUnit Tests ✅
+
+Unit tests are used to verify that individual methods within classes function as expected. They test the smallest logical units of code in isolation (as opposed to integration tests, which check how components work together). We use the **JUnit** library (supported by Maven and Eclipse) for writing and running these tests.
+
+More information on installing and using JUnit can be found here: [http://junit.org/junit4/](http://junit.org/junit4/)
+
+The following tests were implemented for the Wolf and Sheep game logic:
+
+*   A surrounded wolf results in a sheep victory.
+*   A wolf reaching the opposite side (row `y=0`) results in a wolf victory.
+*   A wolf in its initial position has only 1 valid move; after making that move, it should have 4 valid moves on its next turn (assuming open space).
+*   A sheep in its initial row has 2 valid moves (if space allows); a sheep on a side column also has 2 valid moves (if space allows).
+*   Providing fewer than 3 command-line arguments results in an error.
+*   Providing too many arguments (more players than the game supports) results in an error.
+*   Providing an invalid game name as the first argument results in an error.
+
+Here's an example snippet of the JUnit test code verifying the wolf's winning condition (reaching row `y=0`):
+
+![JUnit Test Example: Wolf Wins Condition](https://github.com/Joncarre/Java-language/blob/master/Tecnología%20de%20la%20Programación/Juegos%20usando%20MVC/images/4_4.png)
 
 
