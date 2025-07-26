@@ -1,4 +1,4 @@
-# Java Projects Showcase ☕
+# Java Projects
 
 Welcome! 👋
 
